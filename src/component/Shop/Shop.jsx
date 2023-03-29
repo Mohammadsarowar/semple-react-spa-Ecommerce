@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Products from '../Products/Products';
+import SaveCard from '../saveCard/Savecard';
 import './Shop.css'
 
 const Shop = () => {
@@ -25,10 +26,7 @@ const Shop = () => {
           ></Products>)
          }
         </div>
-        <div className='card-container'>
-        <h3>Order Summary</h3>
-        <p>Selected Items: {save.length}</p>
-        </div>
+        <SaveCard card={save}></SaveCard>
     </div>
     );
 };
